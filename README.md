@@ -4,7 +4,7 @@
 
 ### ¿Qué creé?
 Este proyecto es un juego de persecución inteligente en un laberinto, donde hay dos protagonistas: el **gato** y el **ratón**.  
-En un tablero bidimensional, juegan una partida de 10 turnos (5 cada uno).  
+En un tablero bidimensional, juegan una partida de 10 turnos (5 cada uno) buscando cumplir sus propios objetivos.  
 
 - El **gato** (controlado por el algoritmo Minimax) busca moverse de forma óptima para atrapar al ratón.  
 - El **ratón** (manejado por el usuario con las teclas W/A/S/D) tiene que agarrar el queso antes de que se acaben los turnos, porque si no, ¡pierde igual aunque escape del gato!
