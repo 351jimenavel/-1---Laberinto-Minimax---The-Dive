@@ -188,7 +188,7 @@ def obtener_mejor_movimiento_gato(gato_posicion, jugador_posicion):
 
     return mejor_movimiento     # Retorna dicho movimiento
 
-# Verificar choque de personajes
+# Funciones de estados terminales.
 def verificar_choque_gato_y_raton(jugador_posicion, gato_posicion):
     '''Se establece que se debe cumplir para que los personajes estén en estado de "choque" (que sus posiciones sean las mismas)'''
     return jugador_posicion == gato_posicion
@@ -196,18 +196,18 @@ def verificar_choque_gato_y_raton(jugador_posicion, gato_posicion):
 def agarrar_queso(jugador_posicion, queso_posicion):
     '''Se establece que se debe cumplir para considerar que el ratón agarró el queso (que sus posiciones sean las mismas)'''
     return jugador_posicion == queso_posicion
-
-# Funcion que verifica si el usuario quiere volver a iniciar el juego
+    
 def verificar_salir(movimiento):
     '''Funcion que facilita al usuario terminar el juego'''
     if movimiento == "q":
         print("Juego terminado.")
         return True
-
+        
+# Movimientos aleatorios del ratón
 def primeros_turnos_raton(turnos):
-    #Se establece el recorrido del ratón en ese tiempo donde el "No es inteligente" - 
+    '''Se establece el recorrido del ratón en ese tiempo donde el "No es inteligente"'''
     global jugador_posicion
-    direcciones = [(-1,0), (1,0), (0,-1), (0,1)]        # Arriba, Abajo, izquierda, Derecha (2 espacios)
+    direcciones = [(-1,0), (1,0), (0,-1), (0,1)]        # Arriba, Abajo, izquierda, Derecha
     # Bucle para mover al ratón
     for _ in range(turnos):
         movimientos_validos = []
